@@ -6,8 +6,7 @@ import {GET_ERRORS} from './types';
 export const registerUser = (userData, history) => dispatch => {
     todolist.post('users/register', userData)
         .then(res => {
-            console.log(res);
-            history.push('/login')
+            history.push('/list')
         })
         .catch(err => dispatch({
             type: GET_ERRORS,
